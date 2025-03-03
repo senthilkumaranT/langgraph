@@ -3,16 +3,12 @@
 
 !pip install -qU "langchain[groq]"
 
-from google.colab import userdata
 
-groq_api_key = userdata.get('googlecollab')
-langsmith = userdata.get('langchain')
-travily = userdata.get('travily')
 
 import os
 
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_API_KEY"] = langsmith
+os.environ["LANGCHAIN_API_KEY"] = ""
 
 from langchain_groq import ChatGroq
 
